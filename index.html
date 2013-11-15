@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+			.title {
+				position: relative;
+				top: -100px;
+			}
+			.no-border {
+				border: 0 !important;
+				box-shadow: none !important;
+			}
+			.story-border {
+				border: 10px solid white !important;
+			}
+
+			.wide, .wide p { width: 100% !important; }
+
+			.profile { width: 100%; }
+
+			.profile img {
+				float: left;
+			}
+
+			.profile ul { width: 500px; margin-top: 2em; }
+
+			.dreamy:hover {
+				color: red !important;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>JavaScript</h1>
+					<h3>The Ugly Duckling</h3>
+
+					<img class="title no-border" width="626" height="772" src="assets/title.png" alt="Awwwww.">
+
+					<aside class="notes">
+						Wanted to do something with general appeal so that more just a couple of developers turned up. Also, I thought it might be less work. I'm going to talk you through the history of JavaScript and show how it's gone from quite humble beginnings, to one of the most popular, and I think, most important, programming languages in the world today. And I'll be hanging the whole thing of this rather flimsy duck metaphor. 
+					</aside>
+				</section>
+
+				<section>
+					<h2>Introduction</h2>
+
+					<ul>
+						<li>A brief history of JavaScript</li>
+						<li>Humble beginnings</li>
+						<li>Most popular language today</li>
+						<li>Arguably the most important</li>
+						<li>Flimsy duck metaphor</li>
+					</ul>
+
+					<aside class="notes">
+						I think this is important to have as a slide
+					</aside>
+				</section>
+
+				<!-- section>
+					<h2>Setting Expectations</h2>
+					<ul>
+						<li>Developers: won't learn anything useful today</li>
+						<li>Everyone else: it's not very technical</li>
+						<li>Flimsy duck metaphor</li>
+					</ul>
+
+					<aside class="notes">
+						I can leave my notes here. That's pretty neat.
+					</aside>
+				</section -->
+
+				<section>
+					<h2>About me</h2>
+					<ul>
+						<li>Ian Watson</li>
+						<li>Nearly 10 years @ Amaze</li>
+						<li>Flash developer</li>
+						<li>Oh my God they killed Flash. You bastards!</li>
+						<li>JavaScript noob</li>
+					</ul>
+
+					<aside class="notes">
+						Re-tooled for obvious reasons. JavaScript and ActionScript: similar syntax and use cases. 
+					</aside>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>1995</h2>
+
+						<ul>
+							<!-- a stat here might be nice -->
+							<li>World Wide Web had taken off</li>
+							<li>Netscape Navigator ruled</li>
+							<li>IE didn't exist</li>
+							<li>First browser war looming</li>
+						</ul>
+
+						<aside class="notes">
+							WWW had gone from a tool used primarily by university science departments, to widespread public attention and use, almost overnight. Prompted by the release of Mosaic, which was the first graphical web browser, which was released in 1993.
+							By 1995 Netscape Navigator was the most popular browser with 60% share. IE didnt' even exist yet, version one was releaseed in August with Windows 95. Version 2.0 was released 3 months later. Right on the cusp of the first browser wars 
+						</aside>
+					</section>
+					<section>
+						<h2>Netscape Navigator 1.0</h2>
+						<img width="800" height="600" src="assets/ns1c.gif" alt="Navigator 1.0">
+
+						<aside class="notes">
+							Netscape had adopted hot new programming language Java as part of it server solution. Wanted a light-weight language which they could embed in the browser. Which would compliment Java and appeal to non-professional programmers. Was anyone developing in 1995? Basically they were talking about a few thousand web developers. 
+						</aside>
+					</section>
+					<section>
+						<h2>Brendan Eich</h2>
+
+						<div class="profile">
+							<img width="350" height="350" src="assets/brendan-eich.jpg" alt="Brendan Eich">
+
+							<ul>
+								<li>CTO of Mozilla Corporation</li>
+								<li>Father of JavaScript</li>
+							</ul>
+						</div>
+
+						<aside class="notes">
+							So they got this guy here, Brendan Eich. And they said to him - we want you to write a language to embed in the browser, and it needs to be a bit like Java, and it needs to be dynamic and interpreted, so no compilers or anything like that. And we need it in 10 days. So he went off, probably moaned a bit, and then got down to work and wrote the language. 10 days later he presented it to his bosses, and they said yeah that looks good. Seems to work. Cool, let's go with it. And so it shipped with the next version of Navigator. As an important side note here, Microsoft reverse engineered the whole language, including all the mistakes I'm about to talk about, and called their version jScript. It shipped in IE 3.0 the following year. 
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>The Ugly Duckling</h2>
+
+						<img class="story-border" width="500" height="536" src="assets/ugly-duckling.jpg" alt="The Ugly Duckling">
+
+						<!-- These bullet points are really boring. Maybe just run with the duck -->
+						<!-- ul>
+							<li>Borrowed bits from Self and Scheme</li>
+							<li>Grafted on a C-like syntax</li>
+							<li>Ripped off Java's Math and Date objects</li>
+							<li>Prototypical inheritence</li>
+							<li>Half-baked classical inheritance</li>
+						</ul -->
+
+						<aside class="notes">
+							So as you can imagine, this thing which was knocked together in 10 days and shipped without any real testing, it was a bit of an ugly duckling. 
+						</aside>
+
+					</section>
+					<!-- this could be a candidate for skipping -->
+					<section>
+						<h2>The really bad bits</h2>
+
+						<ul>
+							<li>Global variables</li>
+							<li>Overloaded + operator. 5 + "5" = "55"</li>
+							<li>Automatic semi-colon insertion</li>
+							<li>Broken typeof</li>
+							<li>Type coercion rules</li>
+							<li>false, null, undefined, NaN</li>
+							<li>Broken floating point numbers. 0.1 + 0.2 != 0.3</li>
+						</ul>
+
+						<aside class="notes">
+							And there was some really bad stuff. Some you might call idiosyncracies of the language, others are just plain bugs. This is the stuff that Brendan Eich himself says are really bad. 
+							This is the most boring slide so I won't dwell on it, but if you're a developer who has worked with JavaScript at all, there's a good chance you've been stung by some of these at some stage. 
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>JavaScript is picked on</h2>
+
+						<img class="story-border" width="697" height="536" src="assets/picked-on.jpg" alt="The other languages picked on JavaScript">
+
+						<aside class="notes">
+							It was a bit of a mess, and the other languages started picking on it. You don't look like us. You're kind of a noddy language aren't you? You can't do any serious programming with you. There's no debugging tools. You're really slow. The DOM API is horrible. Generally, JavaScript, you suck. 
+						</aside>
+					</section>
+					<section> 
+						<h2>Error!</h2>
+						<img class="no-border" width="448" height="288" src="assets/JavaScript-error.png" alt="Error!">
+
+						<aside class="notes">
+							Thanks for that, that's really very helpful. 
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>JavaScript runs away</h2>
+
+						<img class="story-border" width="715" height="536" src="assets/hides-away.jpg" alt="JavaScript hides for 10 years">
+
+						<aside class="notes">
+							Generally dismissed and derided by it's brothers and sisters, JavaScript ran away and hid.  
+						</aside>					
+					</section>
+
+					<section>
+
+					<h2 class="fragment dreamy">Dreamweaver rollover</h2>
+
+					<pre><code data-trim contenteditable>
+
+
+function MM_findObj(n, d) { //v4.01
+var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&amp;&amp;parent.frames.length) {
+d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+if(!(x=d[n])&amp;&amp;d.all) x=d.all[n]; for (i=0;!x&amp;&amp;i&lt;d.forms.length;i++) x=d.forms[i][n];
+for(i=0;!x&amp;&amp;d.layers&amp;&amp;i&lt;d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+if(!x &amp;&amp; d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i&lt;(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src;x.src=a[i+2];}
+}
+
+					</code></pre>
+
+					<!-- need a dreamweaver rollover here -->
+
+					<aside class="notes">
+						I think there was a time where if you viewed the source of a web page, there was at least a 50% chance you would see this code. 
+					</aside>
+					</section>
+
+					<section>
+						<h2>Standardised by ECMA</h2>
+						<ul>
+							<li>1st standardised in 1997</li>
+							<li>1999 revision is what we use today</li>
+						</ul>
+
+						<aside class="notes">
+							Something important did happen in that time. Netscape handed over the language to the European Computer Manufacturers Association and they wrote a specification around the language. This is a good thing. 1999 version added regular expressions, improved string handling. It's more or less what we use today. 
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Jesse James Garrett</h2>
+
+						<div class="profile">
+							<img width="350" height="350" src="assets/Jesse-James-Garrett.jpg" alt="Jesse James Garrett">
+
+							<ul>
+								<li>What was he when he wrote the whitepaper?</li>
+								<li>UX Designer</li>
+								<li>Described AJAX (2005)</li>
+							</ul>
+						</div>
+
+						<aside class="notes">
+							Brilliant name. Two characters from the history of the American West in one name. Whitepaper (Ajax: A New Approach to Web Applications). Described a set of technologies which already existed which could be used together to allow developers to send and receive data from the server and update the display in the browser without having to refresh the page. Meant that we could move away from the really static webpages of the time to something much more dynamic. Really important because it meant that the web application was possible. 
+						</aside>
+					</section>
+
+					<section>
+						<h2>JavaScript libraries, thousands of 'em</h2>
+
+						<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+							&ldquo;Used by over 65% of the 10,000 most visited websites, jQuery is the most popular JavaScript library in use today&rdquo;
+						</blockquote>			
+						<small>wikipedia</small>
+
+						<aside class="notes">
+							All these libraries built on JavaScript started popping up. mootools, prototype and of course jQuery. Made it really easy to write this new breed of dynamic functionality in the browser. Alternative to broken DOM API, hiding the browser inconsistencies behind a single API. 
+						</aside>	
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Not an ugly duckling</h2>
+
+						<img class="story-border" width="695" height="536" src="assets/not-ugly-duckling.jpg" alt="You're not an ugly duckling"> 
+
+						<!-- this bit's not really flowing -->
+
+						<!-- ul>
+							<li>Gmail</li>
+							<li>Google maps</li>
+							<li>Google docs</li>
+						</ul -->
+
+						<!-- image of children playing with the swan here -->
+
+						<aside class="notes">
+							And I think this is the point in the story where someone says to JavaScript, look at your reflection. You're not an ugly duckling. 
+							Because google saw a real opportunity in this space, and importantly, they recognised the potential of JavaScript to help them deliver web applications. So they took a punt and built gmail and google maps. is pretty much the archetypal web application. It's the example which is most often used when people talk about them. 
+						</aside>
+					</section>
+
+					<section>
+						<h2>Chrome</h2>
+						
+						<img class="no-border" width="486" height="491" src="assets/chrome.png" alt="Chrome logo">
+						<!-- Just the logo maybe here. Move the mission statement to its own page-->
+
+						<aside class="notes">
+							But in the process of building these, they became frustrated by the limitations of the current crop of browsers, which were basically the biggest barrier to success. JavaScript engines and DOM were slow, support was inconsistent. So they asked themselves well, how hard could it be to write your own browser? So they did. And google Chrome was born
+						</aside>
+					</section>
+
+					<section>
+						<h2>Chrome Mission Statement</h2>
+						
+						<blockquote class="wide" cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+							<p>&ldquo;We realized that the web had evolved from mainly simple text pages to rich, interactive applications and that we needed to completely rethink the browser.</p> <p>What we really needed was not just a browser, but also a modern platform for web pages and applications, and that's what we set out to build.&rdquo;</p>
+						</blockquote>			
+						<small>google, 2008</small>
+
+						<aside class="notes">
+							And I know this is long, but I couldn't really see where to cut it, so I'll just read it. It's a statement which google published along with the beta of Chrome for Windows in 2008. It's long, but I think it really illustrates some of the things I've just been talking about. 
+						</aside>
+
+					</section>
+
+					<section>
+						<h2>New browser wars</h2>
+
+						<ul>
+							<li>Attacked IE market share</li>
+							<li>JavaScript performance</li>
+							<li>Implement new features</li>
+							<li>Aggressive release cycles</li>
+							<li>Huge improvement to debugging tools</li>
+						</ul>
+
+						<aside class="notes">
+							Another round of the browser wars. Overtook IE in 2008. Now 40% to IE's 30%. Chrome and Firefox release every 6 weeks. IE is now annually. Implement new features very quickly, and fix bugs. Fewer people on out-dated browsers. 
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+
+						<img class="no-border" width="512" height="512" src="assets/HTML5_Logo_512.png" alt="HTML5 logo">
+						<!-- badge only here -->
+
+						<aside class="notes">
+							More recently, seen the arrival of HTML5. Gives us JavaScript APIs to access media and device hardware, drawing contexts, vector graphics. Massively increased the amount of cool stuff you can do with JavaScript. More or less, all the stuff we would have needed Flash to do in the past. 
+						</aside>
+					</section>
+
+					<section>
+						<h2>Flash in the pan</h2>
+
+						<img width="341" height="362" src="assets/actionscript_vs_javascript.png" alt="Change in demand for programming jobs">
+
+						<aside class="notes">
+							jobstractor.com stats change in demand for different languages, based on 60,000 jobs posted during 2012. Rise in popularity of JavaScript exactly mirrors the decline in popularity of ActionScript.
+						</aside>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Today</h2>
+
+						<ul>
+							<li>Most popular on github</li>
+							<li>Most popular on stackoverflow.com</li>
+							<li>Most important</li>
+						</ul>
+
+						<aside class="notes">
+							Most popular on github. there are more open source projects hosted on github tagged JavaScript than any other language. Developers, hands up if you use stack. Keep your hands up if you use it every day. What about every hour? It's a programming questions and answers site which has, in the space of a few years, become hugely popular and useful.
+						</aside>
+					</section>
+
+					<section>
+						<h2>Ubiquitous</h2>
+
+						<ul>
+							<li>Anywhere there's a web browser</li>
+							<li>Phonegap, node webkit, Adobe AIR</li>
+							<li>Web technologies driving the desktop</li>
+							<li>Server-side (node)</li>
+							<li>Potential audience of billions</li>
+							<li>No other language has the same reach</li>
+						</ul>
+
+						<!-- need to tighten this up -->
+
+						<aside class="notes">
+							Arguably the most important because it's in the browser, and the browser is ubiquitous. Desktop, laptop, tablet, smart phone, feature phone. Soon it will be on your glasses and your watches. We're seeing web technologies driving the desktop. Large parts of firefox are written in JavaScript. Mobile apps with Phonegap Cordova. Web technologies are first class citizens for developing applications for Windows 8. Node webkit and Adobe AIR runtimes allow traditional 
+						</aside>
+					</section>
+
+					<section>
+						<h2>It's not so bad</h2>
+
+						<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+							<p>&ldquo;Hidden under a huge steaming pile of good intentions and blunders is an elegant and expressive programming language&rdquo;</p>
+						</blockquote>			
+						<small>Douglas Crockford</small>
+
+						<aside class="notes">
+							JavaScript: The Good Parts (2008). There are some good parts and Douglas Crockford argued that if we concentrate on just the good bits, it's possible to build really good programs using JavaScript. The tools are really good now. Built into Visual Studio and Eclipse. Firebug and Chrome are first class debugging tools. And we have a functionaing standards body - Mozilla, Microsoft, Apple, Google, Opera and Yahoo all working together towards the next version, appropriately named "Harmony"
+						</aside>
+					</section>
+
+					<section>
+						<h2>Douglas Crockford</h2>
+
+						<div class="profile">
+							<img width="350" height="350" src="assets/crockford.png" alt="Douglas Crockford">
+
+							<ul>
+								<li>JavaScript architect, PayPal</li>
+								<li>JavaScript: The Good Parts</li>
+								<li>JSON, JSLint and JSMin</li>
+							</ul>
+						</div>
+
+						<aside class="notes">
+			
+						</aside>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Beautiful swan?</h2>
+
+						<!-- beautiful swan picture -->
+
+						<aside class="notes">
+							No, not really. At it's core it's still the same ugly mess. So it's more of a bad ass swan, which has seen off challenges from Java, Silverlight, Flash and VBScript to become the number one on the web.
+						</aside>
+					</section>
+				
+					<section>
+						<h2>Bad ass swan!</h2>
+
+						<img class="story-border" width="899" height="475" src="assets/bad-ass-swan.jpg" alt="Bad ass swan!">
+					</section>
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+
+					<ul>
+						<li>http://delicious.com/net.uk.sweet/brownbag/</li>
+						<li>http://lab.hakim.se/reveal-js/</li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
